@@ -16,7 +16,7 @@ function SplitPic(element) {
             relativeX = x;
         }
         leftPane.css(
-            'clip', 'rect(0px, ' + relativeX + 'px, auto, 0px)'
+            '-webkit-clip-path', 'inset(0px 0px 0px ' + relativeX + 'px)'
         );
         bar.css('left',  relativeX - bar.width() / 2 + 'px');
     };
@@ -92,7 +92,7 @@ function SplitPicVertical(element) {
             relativeY = y;
         }
         overPane.css(
-            'clip', 'rect(' + relativeY + 'px, auto, auto, 0px)'
+            '-webkit-clip-path', 'inset(' + relativeY + 'px 0px 0px 0px)'
         );
         bar.css('top',  relativeY - bar.height() / 2 + 'px');
     };
